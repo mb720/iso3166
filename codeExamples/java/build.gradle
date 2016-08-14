@@ -1,0 +1,24 @@
+plugins {
+  id 'java'
+}
+
+group 'com.bullbytes'
+version '0.1'
+
+sourceCompatibility = 1.8
+
+task wrapper(type: Wrapper) {
+    description = "Generates gradlew(.bat) scripts. To update, run this after changing Gradle's version number."
+    gradleVersion = '3.0-milestone-2'
+
+    // Include Gradle documentation and source
+    distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
