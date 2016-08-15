@@ -1,5 +1,6 @@
 plugins {
   id 'java'
+  id 'idea'
 }
 
 group 'com.bullbytes'
@@ -8,17 +9,23 @@ version '0.1'
 sourceCompatibility = 1.8
 
 task wrapper(type: Wrapper) {
-    description = "Generates gradlew(.bat) scripts. To update, run this after changing Gradle's version number."
-    gradleVersion = '3.0-milestone-2'
+  description = "Generates gradlew(.bat) scripts. To update, run this after changing Gradle's version number."
+  gradleVersion = '3.0-milestone-2'
 
-    // Include Gradle documentation and source
-    distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
+  // Include Gradle documentation and source
+  distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
 }
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+
+  compile 'com.google.guava:guava:19.0'
+  compile 'org.slf4j:slf4j-simple:1.7.21'
+
+  testCompile 'junit:junit:4.12'
+  testCompile 'org.hamcrest:hamcrest-junit:2.0.0.0'
+  testCompile 'com.github.npathai:hamcrest-optional:1.0'
 }
