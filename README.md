@@ -9,5 +9,5 @@ Currently supported languages of country names:
 * German
 
 ## Use in Code
-Have a look at [codeExamples](https://github.com/mb720/iso3166/tree/master/codeExamples) to see examples of translating between country codes and names using code.
+Have a look at [codeExamples](https://github.com/mb720/iso3166/tree/master/codeExamples) to see examples of translating between country codes and names using software.
 
